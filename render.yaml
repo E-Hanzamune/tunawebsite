@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: asl-lite
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "daphne -b 0.0.0.0 -p 10000 asl_lite.asgi:application"
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: asl_lite.settings
+      - key: DISABLE_COLLECTSTATIC
+        value: 1
+      - key: PYTHON_VERSION
+        value: 3.10.14
