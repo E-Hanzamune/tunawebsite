@@ -115,6 +115,11 @@ def extract_keypoints(results):
 
 class ASLConsumer(AsyncWebsocketConsumer):
     async def connect(self):
+                # load model only once
+        if not hasattr(self, "hgfmodel_loaded"):
+            model_path = os.path.join(settings.BASE_DIR, "Model", "action.h5")
+            hgfmodel.load_weights(model_path, by_name=True, skip_mismatch=True)
+            self.hgfmodel_loaded = True
         await self.accept()
         self.holistic = mp_holistic.Holistic(min_detection_confidence=0.3, min_tracking_confidence=0.3)
         self.running = True
