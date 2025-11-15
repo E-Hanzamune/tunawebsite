@@ -199,7 +199,6 @@ tensorflow_object_detection_api==0.1.1
 termcolor==3.2.0
 terminado==0.18.1
 tf-slim==1.1.0
-tf_keras==2.20.1
 threadpoolctl==3.5.0
 tiktoken==0.3.3
 tinycss2==1.4.0
@@ -235,6 +234,7 @@ yarl==1.22.0
 zipp==3.23.0
 zope.event==6.0
 zope.interface==8.0.1
+
 
 
 
