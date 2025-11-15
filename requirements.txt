@@ -65,6 +65,7 @@ googletrans-py==4.0.0
 greenlet==3.2.4
 grpcio==1.76.0
 gTTS==2.5.4
+gunicorn==21.2.0
 h11==0.14.0
 h2==4.2.0
 h5py==3.15.1
@@ -234,6 +235,7 @@ yarl==1.22.0
 zipp==3.23.0
 zope.event==6.0
 zope.interface==8.0.1
+
 
 
 
